@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript 07B</title>
+  </head>
+  <body>
+    <script>
+      for (i = 1; i < 6; i++) {
+        mode = Math.floor(Math.random() * 4 + 1);
+        /* Tambahkan kode debugging di sini */
+        console.log("i =", i, ", mode =", mode);
+        /* Konsol akan mencetak nilai i dan mode untuk setiap iterasi:
+           i = 1 , mode = 1
+           i = 2 , mode = 2
+           i = 3 , mode = 1
+           i = 4 , mode = 1
+           i = 5 , mode = 3 
+           Live reload enabled. */
+        debugger;
+        /* Debugging mode diaktifkan saat mencapai titik ini 
+        Konsol akan hanya mencetak pesan : Live reload enabled. */
+        switch (mode) {
+          case 1:
+            randvar = Math.round(Math.random() * 100);
+            break;
+          case 2:
+            randvar = String(Math.random());
+            break;
+          case 3:
+            randvar = Math.random() / (Math.random() + 1);
+            break;
+          default:
+            randvar = Boolean(Math.random() + 0.5);
+            break;
+        }
+        document.writeln(
+          "Random value: (" + typeof randvar + ")" + randvar + "<br />\n"
+        );
+      }
+    </script>
+  </body>
+</html>

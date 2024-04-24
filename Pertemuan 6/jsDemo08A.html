@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript 08A: Functions</title>
+    <script>
+      // Mendefinisikan sebuah fungsi bernama 'loop' yang mengambil parameter 'max'
+      function loop(max) {
+        // Mendefinisikan sebuah fungsi bertingkat bernama 'applyAndWrite' yang mengambil parameter 'f' (fungsi) dan 'y'
+        function applyAndWrite(f, y) {
+          // Menulis nama fungsi 'f', argumennya 'y', dan hasilnya ke dalam dokumen
+          document.writeln(f.name, "(", y, ") = ", f(y), "<br>");
+        }
+
+        // Mendefinisikan sebuah fungsi bernama 'times2' yang mengambil parameter 'x' dan mengembalikan dua kali lipat nilai 'x'
+        function times2(x) {
+          return 2 * x;
+        }
+
+        // Mendefinisikan sebuah fungsi bernama 'scope' yang mengambil parameter 'x' dan mengembalikan hasil perkalian 'i' dan 'x'
+        function scope(x) {
+          return i * x;
+        }
+
+        // Mendefinisikan sebuah fungsi bernama 'power' yang mengambil parameter 'x' dan mengembalikan hasil kuadrat dari 'x'
+        function power(x) {
+          return x * x;
+        }
+
+        // Melakukan perulangan dari 0 hingga 'max'
+        for (var i = 0; i <= max; i++) {
+          // Memanggil 'applyAndWrite' untuk setiap fungsi ('times2', 'scope', 'power') dengan melewatkan 'i' sebagai argumen
+          applyAndWrite(times2, i);
+          applyAndWrite(scope, i);
+          applyAndWrite(power, i);
+        }
+        /* Fungsi 'scope' menggunakan variabel 'i' yang dideklarasikan dalam cakupan fungsi 'loop'. 
+        Oleh karena itu, 'i' adalah variabel lokal yang hanya tersedia di dalam fungsi 'loop'. */
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      // Memanggil fungsi 'loop' dengan argumen '2'
+      loop(2);
+      // Code for Exercise 1d here
+      times2(6);
+      /* Mencoba memanggil 'times2(6)' secara langsung di sini akan menghasilkan error 
+      karena fungsi 'times2' didefinisikan dalam cakupan fungsi 'loop' dan tidak dapat diakses di luarnya. */
+    </script>
+    </script>
+    <noscript>JavaScript not supported or enabled</noscript>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!-- Web ini merupakan konverter suhu yang memungkinkan pengguna untuk mengkonversi suhu dari berbagai satuan seperti Celcius, Fahrenheit, Kelvin, Reaumur, dan Rankine. -->
+
+<!DOCTYPE html>
+<!-- Mendefinisikan tipe dokumen -->
+<html lang="en-GB">
+  <!-- Menetapkan bahasa dokumen -->
+  <head>
+    <meta charset="utf-8" />
+    <!-- Mengatur set karakter -->
+    <title>Temperature Converter</title>
+    <!-- Judul halaman -->
+    <link rel="stylesheet" type="text/css" href="jsFormsstyles.css" />
+    <!-- Tautan ke file CSS untuk gaya aplikasi -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <!-- Judul aplikasi -->
+      <div class="inputs">
+        <!-- Bagian input -->
+        <div>
+          <label for="type1">From</label>
+          <!-- Label untuk jenis suhu awal -->
+          <select name="type1" id="type1">
+            <!-- Pilihan untuk jenis suhu awal -->
+            <option value="celcius">Celcius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="reaumur">Reaumur</option>
+            <option value="rankine">Rankine</option>
+          </select>
+        </div>
+        <div>
+          <label for="type2">To</label>
+          <!-- Label untuk jenis suhu tujuan -->
+          <select name="type2" id="type2">
+            <!-- Pilihan untuk jenis suhu tujuan -->
+            <option value="celcius">Celcius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="reaumur">Reaumur</option>
+            <option value="rankine">Rankine</option>
+          </select>
+        </div>
+        <div>
+          <label for="degree">Value to Convert</label>
+          <!-- Label untuk nilai yang akan dikonversi -->
+          <input type="number" name="degree" id="inputValue" required />
+          <!-- Input nilai yang akan dikonversi -->
+        </div>
+      </div>
+      <div class="button-group">
+        <button type="button" onclick="clearFields()">Clear</button>
+        <!-- Tombol untuk menghapus input -->
+        <button type="button" onclick="temperature()">Calculate</button>
+        <!-- Tombol untuk menghitung konversi -->
+      </div>
+      <div class="result-box">
+        <h2>Result</h2>
+        <!-- Judul hasil konversi -->
+        <div id="result"></div>
+        <!-- Tempat untuk menampilkan hasil konversi -->
+      </div>
+    </div>
+
+    <table>
+      <caption>
+        <div class="conversion-formula">
+          <h2>Temperature Conversion Formula</h2>
+          <!-- Judul formula konversi suhu -->
+        </div>
+      </caption>
+      <tbody>
+        <tr>
+          <th></th>
+          <!-- Kolom kosong untuk tajuk -->
+          <th>Celsius</th>
+          <!-- Judul kolom untuk Celsius -->
+          <th>Fahrenheit</th>
+          <!-- Judul kolom untuk Fahrenheit -->
+          <th>Kelvin</th>
+          <!-- Judul kolom untuk Kelvin -->
+          <th>Rankine</th>
+          <!-- Judul kolom untuk Rankine -->
+          <th>Réaumur</th>
+          <!-- Judul kolom untuk Réaumur -->
+        </tr>
+        <tr>
+          <th>Celsius</th>
+          <!-- Judul baris untuk Celsius -->
+          <!-- Konversi dari Celsius ke berbagai jenis suhu lainnya -->
+          <td>-</td>
+          <!-- Placeholder untuk data yang tidak relevan -->
+          <td>°F = °C × 9/5 + 32</td>
+          <!-- Konversi dari Celsius ke Fahrenheit -->
+          <td>K = °C + 273.15</td>
+          <!-- Konversi dari Celsius ke Kelvin -->
+          <td>°R = °C × 9/5 + 491.67</td>
+          <!-- Konversi dari Celsius ke Rankine -->
+          <td>°Ré = °C × 4/5</td>
+          <!-- Konversi dari Celsius ke Réaumur -->
+        </tr>
+
+        <tr>
+          <th>Fahrenheit</th>
+          <!-- Label kolom untuk Fahrenheit -->
+          <td>°C = (°F - 32) × 5/9</td>
+          <!-- Konversi dari Fahrenheit ke Celsius -->
+          <td>-</td>
+          <!-- Placeholder untuk data yang tidak relevan -->
+          <td>K = (°F + 459.67) × 5/9</td>
+          <!-- Konversi dari Fahrenheit ke Kelvin -->
+          <td>°R = °F + 459.67</td>
+          <!-- Konversi dari Fahrenheit ke Rankine -->
+          <td>°Ré = (°F - 32) × 4/9</td>
+          <!-- Konversi dari Fahrenheit ke Réaumur -->
+        </tr>
+        <tr>
+          <th>Kelvin</th>
+          <!-- Label kolom untuk Kelvin -->
+          <td>°C = K - 273.15</td>
+          <!-- Konversi dari Kelvin ke Celsius -->
+          <td>°F = K × 9/5 - 459.67</td>
+          <!-- Konversi dari Kelvin ke Fahrenheit -->
+          <td>-</td>
+          <!-- Placeholder untuk data yang tidak relevan -->
+          <td>°R = K × 9/5</td>
+          <!-- Konversi dari Kelvin ke Rankine -->
+          <td>°Ré = (K - 273.15) × 4/5</td>
+          <!-- Konversi dari Kelvin ke Réaumur -->
+        </tr>
+        <tr>
+          <th>Rankine</th>
+          <!-- Label kolom untuk Rankine -->
+          <td>°C = (°R - 491.67) × 5/9</td>
+          <!-- Konversi dari Rankine ke Celsius -->
+          <td>°F = °R - 459.67</td>
+          <!-- Konversi dari Rankine ke Fahrenheit -->
+          <td>K = °R × 5/9</td>
+          <!-- Konversi dari Rankine ke Kelvin -->
+          <td>-</td>
+          <!-- Placeholder untuk data yang tidak relevan -->
+          <td>°Ré = (°R - 491.67) × 4/9</td>
+          <!-- Konversi dari Rankine ke Réaumur -->
+        </tr>
+        <tr>
+          <th>Réaumur</th>
+          <!-- Label kolom untuk Réaumur -->
+          <td>°C = °Ré × 5/4</td>
+          <!-- Konversi dari Réaumur ke Celsius -->
+          <td>°F = °Ré × 9/4 + 32</td>
+          <!-- Konversi dari Réaumur ke Fahrenheit -->
+          <td>K = °Ré × 5/4 + 273.15</td>
+          <!-- Konversi dari Réaumur ke Kelvin -->
+          <td>°R = °Ré × 9/4 + 491.67</td>
+          <!-- Konversi dari Réaumur ke Rankine -->
+          <td>-</td>
+          <!-- Placeholder untuk data yang tidak relevan -->
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>
+        Created by Dwinanda Muhammad Keyzha
+        <!-- Informasi pembuat aplikasi -->
+        <a href="mailto:222212576@stis.ac.id">(222212576@stis.ac.id)</a>
+        <!-- Tautan email pembuat aplikasi -->
+      </p>
+    </div>
+    <!-- JavaScript untuk logika aplikasi -->
+    <script src="jsFormsscript.js"></script>
+    <!-- Tautan ke file JavaScript -->
+  </body>
+</html>

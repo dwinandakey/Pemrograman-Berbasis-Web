@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript 08C</title>
+    <style>
+      table {
+        border: 1px solid black; /* Fixing the border property */
+        padding: 5px;
+      }
+    </style>
+    <script>
+      // Function to sort an array using the bubble sort algorithm
+      function bubble_sort(array) {
+        // Function to swap elements in an array
+        function swap(array, i, j) {
+          // The swap operation can change the array because array is
+          // a local variable of the outer function bubble_sort
+          var tmp = array[i];
+          array[i] = array[j];
+          array[j] = tmp;
+        }
+        if (!(array && array.constructor == Array))
+          throw "Argument not an array";
+        for (var i = 0; i < array.length; i++)
+          for (var j = 0; j < array.length - i; j++)
+            if (array[j + 1] < array[j]) swap(array, j, j + 1);
+        return array;
+      }
+      
+      // Function to sort an array using the bubble sort algorithm, added as a prototype method on the Array data type
+      function bubble_sort2() {
+        function swap(array, i, j) {
+          // The swap operation can change the array because array is
+          // a local variable of the outer function bubble_sort
+          var tmp = array[i];
+          array[i] = array[j];
+          array[j] = tmp;
+        }
+        if (!(this && this.constructor == Array)) throw "Argument not an array";
+        for (var i = 0; i < this.length; i++)
+          for (var j = 0; j < this.length - i; j++)
+            if (this[j + 1] < this[j]) swap(this, j, j + 1);
+        return this;
+      }
+      
+      // Function to sum elements in an array
+      function sum() {
+        let total = 0;
+        if (this.length == 0) return 0;
+        else for (var i = 0; i < this.length; i++) total += parseInt(this[i]);
+        return total;
+      }
+      
+      // Function to get the first element in an array
+      function peek() {
+        return this[0];
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Sorting Arrays</h1>
+    <script>
+      numbers = [20, 4, 3, 9, 6, 8, 5, 10];
+      document.writeln("<h2>Bubble Sort Function</h2>");
+      document.writeln("<table>\n<tbody>");
+      document.writeln(
+        "<tr><td>Array before sorting" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      // Sorting a copy of the array
+      sorted = bubble_sort(numbers.slice());
+      document.writeln(
+        "<tr><td>Array after sorting (copy)" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      sorted = bubble_sort(numbers);
+      document.writeln(
+        "<tr><td>Array after sorting (original)" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "<\/td></tr>"
+      );
+      document.writeln(
+        "<tr><td>Sorted array</td><td>" + sorted.join(", ") + "</td></tr>"
+      );
+      document.writeln("</tbody>\n</table>");
+
+      // Adding bubble sort method to the Array prototype
+      Array.prototype.bubble_sort = bubble_sort2;
+      numbers = [20, 4, 3, 9, 6, 8, 5, 10];
+      document.writeln("<h2>Bubble Sort Prototype Method</h2>");
+      document.writeln("<table>\n<tbody>");
+      document.writeln(
+        "<tr><td>Array before sorting" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      // Sorting a copy of the array
+      sorted = numbers.slice().bubble_sort();
+      document.writeln(
+        "<tr><td>Array after sorting (copy)" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      sorted = numbers.bubble_sort(); // Sorts by character order
+      document.writeln(
+        "<tr><td>Array after sorting (original)" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      document.writeln(
+        "<tr><td>Sorted array</td><td>" + sorted.join(", ") + "</td></tr>"
+      );
+      document.writeln("</tbody>\n</table>");
+
+      numbers = [20, 4, 3, 9, 6, 8, 5, 10];
+      document.writeln("<h2>Pre-defined Array Sort Method</h2>");
+      document.writeln("<table>\n<tbody>");
+      document.writeln(
+        "<tr><td>Array before sorting" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      // Sorting a copy of the array
+      sorted = numbers.slice().sort();
+      document.writeln(
+        "<tr><td>Array after sorting (copy)" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      sorted = numbers.sort(function (a, b) {
+        return a - b;
+      });
+      document.writeln(
+        "<tr><td>Array after sorting (original)" +
+          "</td><td>" +
+          numbers.join(", ") +
+          "</td></tr>"
+      );
+      document.writeln(
+        "<tr><td>Sorted array</td><td>" + sorted.join(", ") + "</td></tr>"
+      );
+      document.writeln("</tbody>\n</table>");
+
+      // Adding sum method to the Array prototype
+      document.writeln("<h2>Array Prototype Sum Function</h2>");
+      Array.prototype.sum = sum;
+      // For array0, the expected result is 0
+      array0 = [];
+      document.writeln(
+        "<div>[" + array0 + "].sum() = " + array0.sum() + "</div>"
+      );
+      // For array1, the expected result is 6
+      array1 = [3, 2, 1];
+      document.writeln(
+        "<div>[" + array1 + "].sum() = " + array1.sum() + "</div>"
+      );
+      // For array2, the expected result is 6
+      array2 = [3, "2M", [1, 0]];
+      document.writeln(
+        "<div>[" + array2 + "].sum() = " + array2.sum() + "</div>"
+      );
+
+      // Adding peek method to the Array prototype
+      document.writeln("<h2>Array Prototype Peek Function</h2>");
+      Array.prototype.peek = peek;
+      // For array0, the expected result is 0
+      array3 = [5, 3];
+      document.writeln(
+        "<div>[" + array0 + "].peek() = " + array0.peek() + "</div>"
+      );
+      document.writeln(
+        "<div>[" + array1 + "].peek() = " + array1.peek() + "</div>"
+      );
+      document.writeln(
+        "<div>[" + array2 + "].peek() = " + array2.peek() + "</div>"
+      );
+      document.writeln(
+        "<div>[" + array3 + "].peek() = " + array3.peek() + "</div>"
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+#container {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr;
+}
+
+nav {
+  background-color: rgb(37, 37, 37);
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+nav ul li a {
+  color: white;
+  height: 30px;
+  padding: 1.5em;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  background-color: #c74451;
+  height: 30px;
+  padding: 1.5em;
+}
+.active {
+  background-color: #c74451;
+}
+
+.tanggal {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.isi_artikel {
+  font-weight: normal;
+}
+
+section ol {
+  list-style: none;
+  font-weight: bold;
+  float: left;
+}
+
+section {
+  grid-column: 2;
+}
+
+aside {
+  padding-top: 1em;
+  padding-left: 2.5em;
+  grid-row: 1;
+}
+
+aside ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer {
+  background-color: rgb(37, 37, 37);
+  padding: 1em;
+  margin: 0;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+}

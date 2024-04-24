@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Dengan Metode Post</title>
+    <style>
+      body {
+        background-image: url("gunung.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #320300;
+        margin: 0;
+        padding: 0;
+      }
+
+      input {
+        width: 25%;
+        padding: 5px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+      function onChange() {
+        const password = document.querySelector("input[name=password]");
+        const confirm = document.querySelector("input[name=confirm]");
+        if (confirm.value === password.value) {
+          confirm.setCustomValidity("");
+        } else {
+          confirm.setCustomValidity("Kata sandi harus sama!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-top: 10px">
+      Formulir Pendaftaran Akun Pendakian Gunung
+    </h1>
+
+    <form
+      name="formulir"
+      action="formsubmit.html"
+      method="post"
+      target="_blank"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <div style="text-align: center; margin-top: 10px">
+        <label for="name">Nama Lengkap</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="no_hp">Nomor Handphone</label><br />
+        <input type="tel" id="no_hp" name="no_hp" required /><br />
+
+        <label for="password">Kata Sandi</label><br />
+        <input
+          name="password"
+          type="password"
+          onChange="onChange()"
+          required
+        /><br />
+
+        <label for="confirm">Ulangi Kata Sandi</label><br />
+        <input
+          name="confirm"
+          type="password"
+          onChange="onChange()"
+          required
+        /><br />
+
+        <label for="username">Username</label><br />
+        <input type="text" id="username" name="username" required /><br />
+
+        <input type="submit" name="submit" value="Daftar" />
+      </div>
+    </form>
+  </body>
+</html>

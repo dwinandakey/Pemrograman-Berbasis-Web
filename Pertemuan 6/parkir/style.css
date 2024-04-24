@@ -1,0 +1,140 @@
+/* Gaya umum untuk elemen body */
+
+body {
+    /* Menggunakan gambar latar belakang dari file pexels-brett-sayles-1756957.jpg */
+    background: url(pexels-brett-sayles-1756957.jpg);
+
+    /* Tidak mengulang gambar latar belakang */
+    background-repeat: no-repeat;
+
+    /* Menyesuaikan ukuran gambar latar belakang agar menutupi seluruh halaman */
+    background-size: cover;
+
+    /* Posisi gambar latar belakang di tengah halaman */
+    background-position: center;
+
+    /* Membuat gambar latar belakang tetap pada posisi saat scrolling */
+    background-attachment: fixed;
+
+    /* Menggunakan jenis huruf 'Roboto' dan jenis fallback sans-serif jika tidak tersedia */
+    font-family: 'Roboto', sans-serif;
+
+    /* Ukuran teks umum medium */
+    font-size: medium;
+}
+
+
+/* Gaya untuk kontainer utama */
+
+.container {
+    /* Membatasi lebar maksimum kontainer menjadi 400 piksel */
+    max-width: 400px;
+
+    /* Menempatkan kontainer di tengah halaman secara horizontal */
+    margin: 50px auto;
+
+    /* Menyusun teks di dalam kontainer menjadi rata tengah */
+    text-align: center;
+
+    /* Warna teks di dalam kontainer */
+    color: aliceblue;
+
+    /* Menetapkan tinggi kontainer pada 80% dari tinggi viewport */
+    top: 80%;
+
+    /* Efek bayangan untuk memberikan kedalaman dan dimensi visual pada kontainer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk input dengan tipe "number" dan elemen select */
+
+input[type="number"],
+select {
+    /* Menetapkan lebar elemen menjadi 48% dari lebar parent */
+    width: 48%;
+
+    /* Memberikan padding sebesar 10 piksel pada setiap sisi elemen */
+    padding: 10px;
+
+    /* Menetapkan margin atas dan bawah sebesar 10 piksel, dan margin kiri dan kanan sebesar 1% dari lebar parent */
+    margin: 10px 1%;
+
+    /* Membuat box model elemen mengikutsertakan padding dan border dalam perhitungan lebar dan tinggi total */
+    box-sizing: border-box;
+}
+
+
+/* Gaya untuk container input waktu */
+
+.time-input-container {
+    /* Menggunakan model display flex untuk membuat container menjadi kontainer flex */
+    display: flex;
+
+    /* Menyusun elemen-elemen di dalamnya agar berada pada dua sisi yang berlawanan */
+    justify-content: space-between;
+}
+
+
+/* Gaya untuk tombol */
+
+button {
+    /* Memberikan padding sebesar 10 piksel di atas dan bawah, serta 20 piksel di sisi kiri dan kanan */
+    padding: 10px 20px;
+
+    /* Warna latar belakang tombol */
+    background-color: #19b2b7;
+    
+    /* Warna teks pada tombol */
+    color: white;
+
+    /* Menghilangkan garis batas pada tombol */
+    border: none;
+
+    /* Mengganti kursor saat diarahkan ke tombol */
+    cursor: pointer;
+
+    /* Menambahkan margin di atas tombol sebesar 1em */
+    margin-top: 1em;
+}
+
+/* Gaya untuk tombol saat dihover */
+
+button:hover {
+    /* Mengubah warna latar belakang tombol saat dihover */
+    background-color: rgb(137, 207, 240);
+
+    /* Menggunakan efek scaling pada tombol saat dihover */
+    transform: scale(1.05);
+}
+
+
+/* Gaya untuk judul h2 */
+
+h2 {
+    /* Mengatur warna teks judul h2 menjadi whitesmoke */
+    color: whitesmoke;
+}
+
+
+/* Gaya untuk label */
+
+label {
+    /* Mengatur warna teks label menjadi whitesmoke */
+    color: whitesmoke;
+}
+
+
+#hasil {
+    font-weight: bold;
+    color: rgb(1, 220, 255);
+    /* Warna teks */
+    -webkit-text-stroke-width: 0.5px;
+    /* Lebar stroke */
+    -webkit-text-stroke-color: blue;
+    /* Warna stroke */
+}
+
+.logo-input-container{
+    position: relative;
+    text-align: center;
+}

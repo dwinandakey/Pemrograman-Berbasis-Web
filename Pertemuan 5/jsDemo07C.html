@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript 07C</title>
+  </head>
+
+  <body>
+    <script>
+      // Mendefinisikan metode toString() untuk Array prototype
+      Array.prototype.toString = function () {
+        var arrStr = "[";
+        for (var i = 0; i < this.length; i++) {
+          arrStr += this[i];
+          if (i < this.length - 1) arrStr += ", ";
+        }
+        return (arrStr += "]");
+      };
+      // Mendefinisikan array values
+      var values = [
+        0,
+        123,
+        1.23e2,
+        "12.3e1",
+        true,
+        false,
+        NaN,
+        Infinity,
+        undefined,
+        null,
+        [0],
+      ];
+      // Menampilkan tipe data dari setiap elemen array
+      for (var i = 0; i < values.length; i++) {
+        document.writeln(
+          i + ") The type of " + values[i] + " is: " + typeof values[i] + "<br>"
+        );
+      }
+      // Menampilkan semua elemen array dalam satu baris
+      document.writeln(
+        i + ") The type of " + values + " is: " + typeof values + "<br>"
+      );
+      // Menampilkan elemen-elemen array dengan join()
+      document.writeln("Elements of values are: " + values.join() + "<br>");
+
+      /* Output yang dibuat jika dalam bentuk bukan tabel
+      for (var i = 0; i < values.length; i++) {
+            for (var j = 0; j < values.length; j++) {
+            document.writeln(
+             "("+ typeof values[i] +")" + values[i] +" == " + "("+ typeof values[i] +")" + values[j] + ": " + (values[i]==values[j])+"<br>"
+            )
+            document.writeln(
+             "("+ typeof values[i] +")" + values[i] +" === " + "("+ typeof values[i] +")" + values[j] + ": " + (values[i]===values[j])+"<br>"
+            )
+            document.writeln(
+             "("+ typeof values[i] +")" + values[i] +" < " + "("+ typeof values[i] +")" + values[j] + ": " + (values[i]<values[j])+"<br>"
+            )
+            document.writeln(
+             "("+ typeof values[i] +")" + values[i] +" > " + "("+ typeof values[i] +")" + values[j] + ": " + (values[i]>values[j])+"<br>"
+            )
+            document.writeln("<br>")
+            }
+       }*/
+      // Membuat tabel untuk menampilkan perbandingan antara elemen-elemen array
+      document.write("<table>");
+      for (var i = 0; i < values.length; i++) {
+        document.writeln("<tr>");
+        document.write(
+          "<table style='border-collapse:collapse; border:0.0625em solid;'>"
+        );
+        for (var j = 0; j < values.length; j++) {
+          document.writeln("<tr >");
+          document.writeln(
+            "<td style='border:1px solid; padding-left:0.625em;'>" +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[i] +
+              " == " +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[j] +
+              ": " +
+              (values[i] == values[j]) +
+              "</td>"
+          );
+          document.writeln(
+            "<td style='border:1px solid; padding-left:0.625em;'>" +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[i] +
+              " === " +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[j] +
+              ": " +
+              (values[i] === values[j]) +
+              "</td>"
+          );
+          document.writeln(
+            "<td style='border:1px solid; padding-left:0.625em;'>" +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[i] +
+              " < " +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[j] +
+              ": " +
+              (values[i] < values[j]) +
+              "</td>"
+          );
+          document.writeln(
+            "<td style='border:1px solid; padding-left:0.625em;'>" +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[i] +
+              " > " +
+              "(" +
+              typeof values[i] +
+              ")" +
+              values[j] +
+              ": " +
+              (values[i] > values[j]) +
+              "</td>"
+          );
+          document.writeln("</tr>");
+        }
+      }
+      document.write("</table>");
+    </script>
+    <noscript>JavaScript not supported or disabled</noscript>
+  </body>
+</html>

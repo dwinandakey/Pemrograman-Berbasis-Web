@@ -1,0 +1,113 @@
+<!-- Js Random adalah web yang memungkinkan pengguna untuk menghasilkan angka acak dalam tabel. Pengguna dapat menentukan batas maksimum untuk angka yang dihasilkan. Setiap sel pada tabel dapat diklik untuk menghasilkan angka acak, dan terdapat juga tombol untuk menghasilkan angka acak pada semua sel sekaligus. Tombol "HITUNG" digunakan untuk menghitung total, rata-rata, dan median dari angka-angka yang dihasilkan. -->
+
+<!DOCTYPE html>
+<!-- Deklarasi tipe dokumen -->
+<html lang="en">
+  <!-- Pendefinisian bahasa dokumen -->
+  <head>
+    <!-- Elemen kepala dokumen -->
+    <meta charset="UTF-8" />
+    <!-- Pengaturan karakter -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Pengaturan kompatibilitas browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Penyesuaian tampilan untuk perangkat -->
+    <title>Js Random</title>
+    <!-- Judul halaman -->
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="jsRandomstyles.css" />
+  </head>
+  <body>
+    <!-- Bagian tubuh dokumen -->
+    <div class="card">
+      <!-- Konten utama -->
+      <h1>TABEL HITUNG</h1>
+      <!-- Judul aplikasi -->
+      <!-- Deskripsi tentang batas maksimum -->
+      <div class="description">Batas Maksimum: 1 - 1000</div>
+      <!-- Informasi tentang batas nilai -->
+      <label for="maxLimit">Batas Maksimum: </label>
+      <!-- Label untuk input batas maksimum -->
+      <input type="number" id="maxLimit" value="100" min="1" max="1000" />
+      <!-- Input untuk menentukan batas maksimum -->
+      <!-- Tabel untuk menampilkan angka yang akan dihitung -->
+      <table>
+        <!-- Tabel untuk menampilkan angka -->
+        <tr>
+          <!-- Baris pertama -->
+          <!-- Sel-sel yang dapat diklik untuk menghasilkan angka acak -->
+          <th id="a" onclick="randomize(this)">0</th>
+          <!-- Sel A -->
+          <th id="b" onclick="randomize(this)">0</th>
+          <!-- Sel B -->
+          <th id="c" onclick="randomize(this)">0</th>
+          <!-- Sel C -->
+        </tr>
+        <!-- Baris kedua -->
+        <tr>
+          <!-- Sel-sel yang dapat diklik untuk menghasilkan angka acak -->
+          <th id="d" onclick="randomize(this)">0</th>
+          <!-- Sel D -->
+          <th id="e" onclick="randomize(this)">0</th>
+          <!-- Sel E -->
+          <th id="f" onclick="randomize(this)">0</th>
+          <!-- Sel F -->
+        </tr>
+        <!-- Baris ketiga -->
+        <tr>
+          <!-- Sel-sel yang dapat diklik untuk menghasilkan angka acak -->
+          <th id="g" onclick="randomize(this)">0</th>
+          <!-- Sel G -->
+          <th id="h" onclick="randomize(this)">0</th>
+          <!-- Sel H -->
+          <th id="i" onclick="randomize(this)">0</th>
+          <!-- Sel I -->
+        </tr>
+      </table>
+      <!-- Tabel angka -->
+      <!-- Tombol untuk menghitung, menghasilkan angka acak pada semua sel, dan mengulang -->
+      <div class="buttons">
+        <!-- Grup tombol -->
+        <button onclick="calculate()">HITUNG</button>
+        <!-- Tombol untuk menghitung total -->
+        <button onclick="randomizeAll()">RANDOMIZE</button>
+        <!-- Tombol untuk menghasilkan angka acak -->
+        <button onclick="window.location.reload()">ULANG</button>
+        <!-- Tombol untuk memuat ulang halaman -->
+      </div>
+      <!-- Deskripsi tentang cara penggunaan -->
+      <div class="description">
+        <!-- Informasi tentang cara menggunakan aplikasi -->
+        Klik pada sel untuk mengubah angka atau klik pada tombol randomize untuk
+        mengubah angka pada semua sel, lalu tekan tombol HITUNG untuk melihat
+        hasil perhitungannya.
+      </div>
+      <!-- Hasil perhitungan -->
+      <div class="result" id="total"></div>
+      <!-- Menampilkan total -->
+      <div class="result" id="average"></div>
+      <!-- Menampilkan rata-rata -->
+      <div class="result" id="median"></div>
+      <!-- Menampilkan median -->
+    </div>
+    <!-- Kartu konten -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <!-- Bagian bawah halaman -->
+      <p>
+        Created by Dwinanda Muhammad Keyzha
+        <!-- Informasi pembuat aplikasi -->
+        <a href="mailto:222212576@stis.ac.id">(222212576@stis.ac.id)</a>
+        <!-- Tautan email pembuat aplikasi -->
+      </p>
+    </div>
+    <!-- Footer -->
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="jsRandomscript.js"></script>
+    <!-- Skrip JavaScript -->
+  </body>
+  <!-- Tubuh dokumen -->
+</html>
+<!-- Penutup dokumen -->

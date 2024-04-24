@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript 09B: Objects</title>
+    <script>
+      class Employees {
+        constructor() {
+          // Inisialisasi array untuk menyimpan karyawan
+          this.employee = [];
+        }
+        // Metode untuk menambahkan karyawan baru
+        add(employee) {
+          this.employee.push(employee);
+        }
+        // Metode untuk menghapus karyawan berdasarkan nama
+        delete(name) {
+          for (let index = 0; index < this.employee.length; index++) {
+            if (this.employee[index].getName() === name) {
+              // Hapus karyawan dari array dan kurangi jumlah karyawan yang ada
+              this.employee.splice(index, 1);
+              Employee.count--;
+            }
+          }
+        }
+        // Metode untuk mendapatkan karyawan berdasarkan indeks
+        get(index) {
+          return this.employee[index];
+        }
+        // Metode untuk mendapatkan seluruh array karyawan
+        getArray() {
+          return this.employee;
+        }
+      }
+      class Employee {
+        // Inisialisasi variabel statik untuk menghitung jumlah karyawan
+        static count = 0;
+        constructor(name, salary) {
+          // Tambahkan 1 ke jumlah karyawan ketika karyawan baru dibuat
+          Employee.count++;
+          // Set nama dan gaji karyawan
+          this.name = name;
+          let _salary = salary;
+
+          // Metode untuk mendapatkan gaji karyawan
+          this.getSalary = function () {
+            return _salary;
+          };
+          // Metode untuk mengatur gaji karyawan
+          this.setSalary = function (salary) {
+            _salary = salary;
+          };
+        }
+        // Metode untuk mendapatkan nama karyawan
+        getName() {
+          return this.name;
+        }
+        // Metode statik untuk mendapatkan jumlah total karyawan
+        static getEmployeeCount() {
+          return Employee.count;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      var employees = new Employees();
+      // Tambahkan beberapa karyawan
+      employees.add(new Employee("Hal Smith", 30000));
+      employees.add(new Employee("Tim Peck", 20000));
+      employees.add(new Employee("Ari Bell", 18000));
+
+      // Tampilkan nama dan gaji karyawan pertama
+      document.writeln("e[0].name = " + employees.get(0).name + "<br>");
+      document.writeln(
+        "e[0].salary = " + employees.get(0).getSalary() + "<br>"
+      );
+
+      // Tampilkan nama dan gaji karyawan kedua
+      document.writeln("e[1]'s name =" + employees.get(1).name + "<br>");
+      document.writeln("e[1]'s salary =" + employees.get(1).salary + "<br>");
+
+      // Ubah nama dan gaji karyawan kedua
+      document.writeln(
+        "Changing e[1]'s name to 'Tom Beck'and " + "salary to 25000<br>"
+      );
+      employees.get(1).name = "Tom Beck";
+      employees.get(1).setSalary(25000);
+
+      // Tampilkan nama dan gaji karyawan kedua setelah diubah
+      document.writeln("e[1]'s name = " + employees.get(1).name + "<br>");
+      document.writeln("e[1]'s salary = " + employees.get(1).salary + "<br>");
+
+      // Tampilkan jumlah total karyawan
+      document.writeln("Employees: " + Employee.getEmployeeCount() + "<br>");
+
+      // Hapus karyawan pertama dan tampilkan jumlah total karyawan
+      employees.delete("Hal Smith");
+      document.writeln("Employees: " + Employee.getEmployeeCount() + "<br>");
+
+      // Tampilkan nama karyawan pertama dan kedua setelah menghapus karyawan pertama
+      document.writeln("e[0].name = " + employees.get(0).name + "<br>");
+      document.writeln("e[2].name = " + employees.get(1).name + "<br>");
+    </script>
+  </body>
+</html>

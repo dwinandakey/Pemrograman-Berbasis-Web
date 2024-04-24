@@ -1,0 +1,128 @@
+/* Gaya untuk elemen body */
+body {
+  display: flex; /* Menetapkan tata letak menjadi flexbox */
+  flex-direction: column; /* Menetapkan arah konten menjadi vertikal (dari atas ke bawah) */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  min-height: 100vh; /* Set tinggi minimum menjadi 100% dari viewport height */
+  margin: 0; /* Hilangkan margin */
+  background-color: #000000; /* Warna latar belakang */
+  color: #333; /* Warna teks */
+  font-family: Arial, sans-serif; /* Jenis font */
+  background: url(jsRandom.jpeg); /* Gambar latar belakang */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar latar belakang */
+  background-size: cover; /* Geser dan sesuaikan ukuran gambar latar belakang */
+}
+
+/* Gaya untuk elemen .card */
+.card {
+  display: flex; /* Menetapkan tata letak menjadi flexbox */
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  align-items: center; /* Pusatkan konten secara vertikal */
+  flex-direction: column; /* Menetapkan arah konten menjadi vertikal (dari atas ke bawah) */
+  height: 650px; /* Tinggi elemen */
+  width: 600px; /* Lebar elemen */
+  border-radius: 10px; /* Sudut border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  background-color: #f5f5dc; /* Warna latar belakang */
+  padding: 20px; /* Ruang dalam elemen */
+  flex-grow: 1; /* Elemen akan memperbesar sebanyak mungkin */
+  margin-top: 20px; /* Jarak dari atas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  margin-bottom: 20px; /* Jarak dari bawah */
+}
+
+/* Gaya untuk judul di dalam .card */
+.card h1 {
+  margin-bottom: 25px; /* Jarak bawah dari judul */
+  color: #333; /* Warna teks */
+}
+
+/* Gaya untuk tabel di dalam .card */
+.card table {
+  border-collapse: collapse; /* Gabungkan garis tepi */
+  width: 80%; /* Lebar tabel */
+  margin-bottom: 20px; /* Jarak bawah dari tabel */
+  table-layout: fixed; /* Tetapkan lebar kolom */
+}
+
+/* Gaya untuk sel dalam tabel di dalam .card */
+.card table tr th {
+  border: 2px solid #333; /* Border */
+  font-size: 36px; /* Ukuran font */
+  cursor: pointer; /* Kursor pointer */
+  padding: 10px; /* Ruang dalam sel */
+  width: 33%; /* Lebar setiap sel */
+  background-color: #e74c3c; /* Warna latar belakang */
+  color: #ffffff; /* Warna teks */
+}
+
+/* Efek hover pada sel dalam tabel di dalam .card */
+.card table tr th:hover {
+  background-color: rgba(
+    226,
+    87,
+    45,
+    0.363
+  ); /* Efek transparansi saat dihover */
+}
+
+/* Gaya untuk tombol di dalam .card */
+.card button {
+  margin-top: 20px; /* Jarak atas dari tombol */
+  cursor: pointer; /* Kursor pointer */
+  background-color: #ff7f50; /* Warna latar belakang */
+  border: none; /* Tanpa border */
+  color: #fff; /* Warna teks */
+  padding: 10px 20px; /* Ruang dalam tombol */
+  border-radius: 10px; /* Sudut border */
+  font-weight: 600; /* Ketebalan font */
+  font-size: 16px; /* Ukuran font */
+  transition: background-color 0.3s; /* Animasi perubahan warna latar belakang */
+}
+
+/* Efek hover pada tombol di dalam .card */
+.card button:hover {
+  background-color: #e63900; /* Warna latar belakang saat dihover */
+}
+
+/* Gaya untuk judul di dalam .card dengan efek gradien */
+.card h1 {
+  margin-bottom: 25px; /* Jarak bawah dari judul */
+  color: #333; /* Warna teks */
+  background: linear-gradient(to right, #ff9966, #ff5e62); /* Efek gradien */
+  -webkit-background-clip: text; /* Membuat efek gradien hanya berlaku untuk teks */
+  -webkit-text-fill-color: transparent; /* Menyembunyikan warna teks */
+}
+
+/* Gaya untuk deskripsi di dalam .card */
+.description {
+  margin-top: 20px; /* Jarak atas dari deskripsi */
+  text-align: center; /* Rata tengah teks */
+  color: #000000; /* Warna teks */
+}
+
+/* Gaya untuk hasil perhitungan di dalam .card */
+.result {
+  margin-top: 20px; /* Jarak atas dari hasil perhitungan */
+  text-align: center; /* Rata tengah teks */
+  font-size: 24px; /* Ukuran font */
+  font-weight: bold; /* Ketebalan font */
+  color: #ff5733; /* Warna teks */
+}
+
+/* Gaya untuk footer */
+.footer {
+  background-color: #f5f5dc; /* Warna latar belakang */
+  width: 100%; /* Lebar footer */
+  text-align: center; /* Rata tengah teks */
+  color: #000000; /* Warna teks */
+  font-weight: bold; /* Ketebalan font */
+  margin: 0; /* Hilangkan margin */
+  padding: 1px 0; /* Ruang atas dan bawah */
+}
+
+/* Gaya untuk tautan di dalam footer */
+.footer a {
+  color: #000000; /* Warna teks */
+}

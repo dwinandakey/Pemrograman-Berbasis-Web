@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="jsParkir.js"></script>
+  <title>Program Parkir Sederhana</title>
+</head>
+
+<body>
+   
+  <!-- Kontainer utama untuk mengelompokkan elemen-elemen -->
+  <div class="container">
+    <!-- Judul utama program -->
+    <h2>Program Parkir Sederhana</h2>
+    <!-- Label untuk memilih jenis kendaraan -->
+    <label for="jenisKendaraan">Jenis Kendaraan:</label>
+    <!-- Dropdown (select) untuk memilih jenis kendaraan -->
+    <select id="jenisKendaraan">
+      <option value="sepeda">Sepeda</option>
+      <option value="motor">Motor</option>
+      <option value="mobil">Mobil</option>
+      <option value="bus">Bus</option>
+    </select>
+
+    <div class="time-input-container">
+    <!-- Container untuk input jam masuk -->
+      <div>
+        <!-- Label untuk input jam masuk -->
+        <label for="jamMasuk">Jam Masuk:</label>
+        <!-- Input untuk memasukkan jam masuk (hanya menerima nilai 0-23) -->
+        <input type="number" id="jamMasuk" placeholder="Jam masuk (0-23)" required>
+      </div>
+
+       <!-- Container untuk input menit masuk -->
+      <div>
+         <!-- Label untuk input menit masuk -->
+        <label for="menitMasuk">Menit:</label>
+         <!-- Input untuk memasukkan menit masuk (hanya menerima nilai 0-59) -->
+        <input type="number" id="menitMasuk" placeholder="Menit (0-59)" required>
+      </div>
+    </div>
+
+     <!-- Container untuk input jam keluar -->
+    <div class="time-input-container">
+      <div>
+        <!-- Label untuk input jam keluar -->
+        <label for="jamKeluar">Jam Keluar:</label>
+         <!-- Input untuk memasukkan jam keluar (hanya menerima nilai 0-23) -->
+        <input type="number" id="jamKeluar" placeholder="Jam keluar (0-23)" required>
+      </div>
+
+      <!-- Container untuk input menit keluar -->
+      <div>
+         <!-- Label untuk input menit keluar -->
+        <label for="menitKeluar">Menit:</label>
+        <!-- Input untuk memasukkan menit keluar (hanya menerima nilai 0-59) -->
+        <input type="number" id="menitKeluar" placeholder="Menit (0-59)" required>
+      </div>
+    </div>
+
+    <!-- Tombol untuk menghitung biaya parkir dengan memanggil fungsi hitungBiaya() -->
+    <button onclick="hitungBiaya()">Hitung Biaya Parkir</button>
+    <!-- Paragraf untuk menampilkan hasil perhitungan biaya parkir -->
+    <p id="hasil"></p>
+  </div>
+
+  <div class="logo-input-container">
+    <img src="Frame 2.svg">
+  </div>
+
+</body>
+
+</html>

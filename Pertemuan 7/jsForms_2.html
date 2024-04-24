@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Temperature Converter</title>
+    <style>
+      body {
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background: url(jsForms.jpeg);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #000000;
+        background-color: #f5f5dc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .inputs div {
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        font-weight: bold;
+      }
+
+      select,
+      input[type="number"] {
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: calc(50% - 0.5rem);
+        border-radius: 0.25rem;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+      }
+
+      .button-group {
+        margin-top: 1rem;
+      }
+
+      .button-group button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 0.25rem;
+        box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.1);
+        margin-right: 0.5rem;
+      }
+
+      .button-group button:hover {
+        background-color: #0069d9;
+      }
+
+      #result {
+        height: 40px;
+        font-size: 20px; /* Menurunkan ukuran font */
+        border: 1px solid #000000;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+        padding: 0 10px;
+        font-weight: 400; /* Mengurangi ketebalan font */
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      #result:focus {
+        height: 40px;
+        font-size: 20px; /* Menurunkan ukuran font */
+        border: 1px solid rgb(130, 130, 255);
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+        padding: 0 10px;
+      }
+      .result-box {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 0px; /* Tambahkan margin-bottom agar tidak bertabrakan dengan footer */
+      }
+
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #add8e6;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      td {
+        background-color: #ffffff;
+      }
+
+      .footer {
+        background-color: #f5f5dc;
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        font-weight: bold; /* Menambahkan ketebalan teks */
+        margin: 0; /* Menghapus margin */
+        padding: 1px 0; /* Menambahkan padding atas dan bawah */
+      }
+
+      .footer a {
+        color: #000000;
+      }
+
+      .conversion-formula {
+        margin: auto;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        background-color: #f5f5dc;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function temperature() {
+        let inputValue = parseFloat(
+          document.getElementById("inputValue").value
+        );
+        let type1 = document.getElementById("type1").value;
+        let type2 = document.getElementById("type2").value;
+        let result;
+
+        if (isNaN(inputValue)) {
+          alert("Please enter temperature as a number.");
+          return; // Menghentikan eksekusi fungsi jika input tidak valid
+        } else if (type1 === "celcius") {
+          if (type2 === "fahrenheit") {
+            result = (inputValue * 9) / 5 + 32;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°C is equal to ${result.toFixed(2)}°F`;
+          } else if (type2 === "kelvin") {
+            result = inputValue + 273.15;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°C is equal to ${result.toFixed(2)} K`;
+          } else if (type2 === "reaumur") {
+            result = (inputValue * 4) / 5;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°C is equal to ${result.toFixed(2)}°Re`;
+          } else if (type2 === "rankine") {
+            result = ((inputValue + 273.15) * 9) / 5;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°C is equal to ${result.toFixed(2)}°R`;
+          } else {
+            result = inputValue;
+          }
+        } else if (type1 === "fahrenheit") {
+          if (type2 === "celcius") {
+            result = ((inputValue - 32) * 5) / 9;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°F is equal to ${result.toFixed(2)}°C`;
+          } else if (type2 === "kelvin") {
+            result = ((inputValue - 32) * 5) / 9 + 273.15;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°F is equal to ${result.toFixed(2)} K`;
+          } else if (type2 === "reaumur") {
+            result = ((inputValue - 32) * 4) / 9;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°F is equal to ${result.toFixed(2)}°Re`;
+          } else if (type2 === "rankine") {
+            result = inputValue + 459.67;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°F is equal to ${result.toFixed(2)}°R`;
+          } else {
+            result = inputValue;
+          }
+        } else if (type1 === "kelvin") {
+          if (type2 === "celcius") {
+            result = inputValue - 273.15;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue} K is equal to ${result.toFixed(2)}°C`;
+          } else if (type2 === "fahrenheit") {
+            result = ((inputValue - 273.15) * 9) / 5 + 32;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue} K is equal to ${result.toFixed(2)}°F`;
+          } else if (type2 === "reaumur") {
+            result = ((inputValue - 273.15) * 4) / 5;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue} K is equal to ${result.toFixed(2)}°Re`;
+          } else if (type2 === "rankine") {
+            result = (inputValue * 9) / 5;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue} K is equal to ${result.toFixed(2)}°R`;
+          } else {
+            result = inputValue;
+          }
+        } else if (type1 === "reaumur") {
+          if (type2 === "celcius") {
+            result = (inputValue * 5) / 4;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°Re is equal to ${result.toFixed(2)}°C`;
+          } else if (type2 === "fahrenheit") {
+            result = (inputValue * 9) / 4 + 32;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°Re is equal to ${result.toFixed(2)}°F`;
+          } else if (type2 === "kelvin") {
+            result = (inputValue * 5) / 4 + 273.15;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°Re is equal to ${result.toFixed(2)} K`;
+          } else if (type2 === "rankine") {
+            result = (inputValue * 5) / 4 + (273.15 * 9) / 5;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°Re is equal to ${result.toFixed(2)}°R`;
+          } else {
+            result = inputValue;
+          }
+        } else if (type1 === "rankine") {
+          if (type2 === "celcius") {
+            result = ((inputValue - 491.67) * 5) / 9;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°R is equal to ${result.toFixed(2)}°C`;
+          } else if (type2 === "fahrenheit") {
+            result = inputValue - 459.67;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°R is equal to ${result.toFixed(2)}°F`;
+          } else if (type2 === "kelvin") {
+            result = (inputValue * 5) / 9;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°R is equal to ${result.toFixed(2)} K`;
+          } else if (type2 === "reaumur") {
+            result = ((inputValue - 491.67) * 4) / 9;
+            document.getElementById(
+              "result"
+            ).innerText = `${inputValue}°R is equal to ${result.toFixed(2)}°Re`;
+          } else {
+            result = inputValue;
+          }
+        } else if (type1 === type2) {
+          result = inputValue;
+          document.getElementById(
+            "result"
+          ).innerText = `${inputValue}${getSymbol(
+            type1
+          )} is equal to ${result.toFixed(2)}${getSymbol(type2)}`;
+        }
+      }
+
+      function clearFields() {
+        document.getElementById("inputValue").value = "";
+        document.getElementById("result").innerText = "";
+      }
+
+      window.onload = function () {
+        document
+          .getElementById("inputValue")
+          .addEventListener("input", validateInput);
+      };
+
+      function validateInput() {
+        var inputValue = document.getElementById("inputValue").value;
+        if (inputValue === "") {
+          alert("Please enter temperature as a number.");
+          location.reload();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <div class="inputs">
+        <div>
+          <label for="type1">From</label>
+          <select name="type1" id="type1">
+            <option value="celcius">Celcius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="reaumur">Reaumur</option>
+            <option value="rankine">Rankine</option>
+          </select>
+        </div>
+        <div>
+          <label for="type2">To</label>
+          <select name="type2" id="type2">
+            <option value="celcius">Celcius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="reaumur">Reaumur</option>
+            <option value="rankine">Rankine</option>
+          </select>
+        </div>
+        <div>
+          <label for="degree">Value to Convert</label>
+          <input type="number" name="degree" id="inputValue" required />
+        </div>
+      </div>
+      <div class="button-group">
+        <button type="button" onclick="clearFields()">Clear</button>
+        <button type="button" onclick="temperature()">Calculate</button>
+      </div>
+      <div class="result-box">
+        <h2>Result</h2>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <table>
+      <caption>
+        <div class="conversion-formula">
+          <h2>Temperature Conversion Formula</h2>
+        </div>
+      </caption>
+      <tbody>
+        <tr>
+          <th></th>
+          <th>Celsius</th>
+          <th>Fahrenheit</th>
+          <th>Kelvin</th>
+          <th>Rankine</th>
+          <th>Réaumur</th>
+        </tr>
+        <tr>
+          <th>Celsius</th>
+          <td>-</td>
+          <td>°F = °C × 9/5 + 32</td>
+          <td>K = °C + 273.15</td>
+          <td>°R = °C × 9/5 + 491.67</td>
+          <td>°Ré = °C × 4/5</td>
+        </tr>
+        <tr>
+          <th>Fahrenheit</th>
+          <td>°C = (°F - 32) × 5/9</td>
+          <td>-</td>
+          <td>K = (°F + 459.67) × 5/9</td>
+          <td>°R = °F + 459.67</td>
+          <td>°Ré = (°F - 32) × 4/9</td>
+        </tr>
+        <tr>
+          <th>Kelvin</th>
+          <td>°C = K - 273.15</td>
+          <td>°F = K × 9/5 - 459.67</td>
+          <td>-</td>
+          <td>°R = K × 9/5</td>
+          <td>°Ré = (K - 273.15) × 4/5</td>
+        </tr>
+        <tr>
+          <th>Rankine</th>
+          <td>°C = (°R - 491.67) × 5/9</td>
+          <td>°F = °R - 459.67</td>
+          <td>K = °R × 5/9</td>
+          <td>-</td>
+          <td>°Ré = (°R - 491.67) × 4/9</td>
+        </tr>
+        <tr>
+          <th>Réaumur</th>
+          <td>°C = °Ré × 5/4</td>
+          <td>°F = °Ré × 9/4 + 32</td>
+          <td>K = °Ré × 5/4 + 273.15</td>
+          <td>°R = °Ré × 9/4 + 491.67</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>
+        Created by Dwinanda Muhammad Keyzha
+        <a href="mailto:222212576@stis.ac.id">(222212576@stis.ac.id)</a>
+      </p>
+    </div>
+  </body>
+</html>

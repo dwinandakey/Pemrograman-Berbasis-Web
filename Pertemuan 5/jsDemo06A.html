@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello World</title>
+  </head>
+  <!-- Ketika variabel userAge tidak dideklarasikan di sini, akan terjadi error karena variabel belum dideklarasikan -->
+  <body>
+    <script id="s1">
+      // Skrip dengan id s1
+      var userAge = 27;
+      /* Kode JavaScript dijalankan tanpa kesalahan dan menghasilkan output yang berbeda dari yang dijelaskan pada poin 7.
+      Perbedaan ini terjadi karena variabel dideklarasikan terlebih dahulu, sehingga variabel dalam JavaScript memiliki cakupan yang mencakup skrip di bawahnya,
+      selama variabel sudah dideklarasikan di skrip di atasnya. Hal ini disebabkan oleh sifat bahasa JavaScript yang diinterpretasikan. */
+    </script>
+    <p>Ini adalah skrip JavaScript pertama kami</p>
+
+    <script id="s2">
+      // Skrip dengan id s2
+      user = "Dwinanda Muhammad Keyzha";
+      document.writeln("<p><b>Hello " + user + "<br>\nHello World!</b></p>");
+
+      document.writeln("(1) Nilai dari userAge adalah: " + userAge + "<br>");
+      document.writeln("(2) Pernyataan ini dieksekusi<br>");
+      // var userAge = 27;
+      /* Saat userAge dideklarasikan dan diinisialisasi di elemen id 2, di antara baris (2) dan (3):
+      Variabel dapat digunakan baik di bawah maupun di atas karena JavaScript akan mengangkat (hoist) semua deklarasi (fungsi dan variabel) ke atas.
+      Namun, inisialisasi variabel akan tetap dilakukan di antara baris 2 dan 3, sehingga pada baris 1 variabel userAge akan memiliki nilai undefined, tetapi pada baris 3 nilai variabel sudah terdefinisi. */
+      document.writeln("(3) Nilai dari userAge adalah: " + userAge + "<br>");
+    </script>
+
+    <script id="s3">
+      // Skrip dengan id s3
+      // var userAge = 27;
+      /* Terjadi error dalam kode JavaScript yang menyatakan bahwa userAge tidak terdefinisi.
+      Untuk menggunakan variabel dalam JavaScript, variabel tersebut harus dideklarasikan terlebih dahulu atau berada dalam skrip yang sama,
+      karena JavaScript diinterpretasikan dan memiliki perilaku "hoisting", yaitu mengangkat semua deklarasi (baik fungsi maupun variabel) ke atas. */
+    </script>
+
+    <p>Ini adalah bagian lain dari halaman</p>
+    <!-- Latihan 1j -->
+    <script id="s4">
+      if (false) {
+        // var x = 519;
+        var y = 519;
+        /* Apa yang akan menjadi outputnya dalam browser dan konsol? Apakah akan ada kesalahan?
+        Outputnya akan tergantung pada kondisi di blok 'if'. Karena kondisi 'if (false)' tidak akan pernah dievaluasi sebagai 'true', maka blok 'else' akan dieksekusi.
+        Karena variabel 'x' tidak dideklarasikan di dalam blok 'else', akan terjadi error. Ini karena ketika JavaScript menemukan referensi ke variabel yang belum dideklarasikan, itu akan menghasilkan ReferenceError.
+        Apa yang ingin ditunjukkan dalam latihan ini terkait dengan cakupan variabel dalam JavaScript?
+        Latihan ini menunjukkan konsep cakupan variabel dalam JavaScript. Variabel yang dideklarasikan di dalam suatu blok, fungsi, atau skrip memiliki cakupan (scope) yang berbeda.
+        Apa yang ingin ditunjukkan dalam latihan ini terkait dengan eksekusi kode JavaScript?
+        Hal ini juga menyoroti bagaimana JavaScript mengeksekusi kode. Kode dieksekusi baris per baris, dan ketika sebuah variabel ditemukan, JavaScript akan mencari deklarasinya dalam cakupan saat itu.
+        Jika terjadi kesalahan dalam eksekusi latihan ini, coba perbaiki sekarang dan jalankan kembali. */
+      } else {
+        document.writeln("Nilai dari x adalah " + x + "<br>");
+      }
+      // Bagaimana outputnya dalam browser dan konsol? Apakah terjadi kesalahan?
+      /* Output dalam browser dan konsol: Tidak ada output karena blok else tidak dieksekusi.
+      Terjadi kesalahan karena variabel x tidak dideklarasikan sebelum digunakan di dalam blok else.
+      Latihan ini juga menyoroti cara JavaScript mengeksekusi kode dan bagaimana variabel memiliki cakupan yang berbeda.
+      Untuk memperbaiki kesalahan ini, kita harus mendeklarasikan variabel x sebelum menggunakannya di dalam blok else. */
+    </script>
+    <noscript>Javascript tidak didukung atau dinonaktifkan</noscript>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+body {
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  font-family: Arial, sans-serif; /* Atur jenis font */
+  align-items: center; /* Pusatkan konten secara vertikal */
+  position: relative; /* Tetapkan posisi relatif */
+  width: 100%; /* Gunakan lebar penuh */
+  height: 100vh; /* Gunakan tinggi viewport */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar latar */
+  background-size: cover; /* Sesuaikan gambar latar dengan ukuran */
+  text-align: center; /* Pusatkan teks */
+  margin: 0; /* Hapus margin */
+  padding: 0; /* Hapus padding */
+  background: url(jsForms.jpeg); /* Gunakan gambar latar */
+}
+
+.container {
+  max-width: 800px; /* Atur lebar maksimum */
+  margin: 50px auto; /* Atur margin secara otomatis di atas dan bawah, dan secara manual di samping */
+  padding: 20px; /* Atur padding */
+  border: 1px solid #000000; /* Tentukan border */
+  background-color: #f5f5dc; /* Tetapkan warna latar belakang */
+  border-radius: 5px; /* Tambahkan border-radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+.inputs {
+  display: flex; /* Gunakan display flex */
+  flex-direction: column; /* Atur arah kolom */
+  margin-bottom: 20px; /* Atur margin bawah */
+}
+
+.inputs div {
+  margin-bottom: 15px; /* Atur margin bawah */
+}
+
+label {
+  font-size: 1rem; /* Atur ukuran font */
+  margin-bottom: 0.5rem; /* Atur margin bawah */
+  display: block; /* Atur tampilan sebagai blok */
+  font-weight: bold; /* Atur ketebalan font */
+}
+
+select,
+input[type="number"] {
+  padding: 0.5rem; /* Atur padding */
+  font-size: 1rem; /* Atur ukuran font */
+  width: calc(50% - 0.5rem); /* Atur lebar */
+  border-radius: 0.25rem; /* Tambahkan border-radius */
+  border: 1px solid #000000; /* Tentukan border */
+  box-sizing: border-box; /* Tentukan box-sizing */
+}
+
+.button-group {
+  margin-top: 1rem; /* Atur margin atas */
+}
+
+.button-group button {
+  padding: 0.5rem 1rem; /* Atur padding */
+  font-size: 1rem; /* Atur ukuran font */
+  cursor: pointer; /* Tampilkan cursor pointer */
+  background-color: #007bff; /* Tetapkan warna latar belakang */
+  color: white; /* Atur warna teks */
+  border: none; /* Hapus border */
+  border-radius: 0.25rem; /* Tambahkan border-radius */
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  margin-right: 0.5rem; /* Atur margin kanan */
+}
+
+.button-group button:hover {
+  background-color: #0069d9; /* Ubah warna latar belakang saat hover */
+}
+
+#result {
+  height: 40px; /* Atur tinggi */
+  font-size: 20px; /* Atur ukuran font */
+  border: 1px solid #000000; /* Tentukan border */
+  border-left: none; /* Hapus border kiri */
+  border-right: none; /* Hapus border kanan */
+  border-top: none; /* Hapus border atas */
+  outline: none; /* Hapus outline */
+  padding: 0 10px; /* Atur padding */
+  font-weight: 400; /* Atur ketebalan font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Atur jenis font */
+}
+
+#result:focus {
+  height: 40px; /* Atur tinggi */
+  font-size: 20px; /* Atur ukuran font */
+  border: 1px solid rgb(130, 130, 255); /* Tentukan border dengan warna khusus saat fokus */
+  border-left: none; /* Hapus border kiri */
+  border-right: none; /* Hapus border kanan */
+  border-top: none; /* Hapus border atas */
+  outline: none; /* Hapus outline */
+  padding: 0 10px; /* Atur padding */
+}
+
+.result-box {
+  margin-top: 20px; /* Atur margin atas */
+  padding: 10px; /* Atur padding */
+  border: 1px solid #000000; /* Tentukan border */
+  border-radius: 5px; /* Tambahkan border-radius */
+  background-color: #ffffff; /* Tetapkan warna latar belakang */
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff; /* Warna teks putih */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek shadow */
+  background: linear-gradient(to right, #ff9966, #ff5e62); /* Efek gradien */
+  -webkit-background-clip: text; /* Gradien hanya berlaku untuk teks */
+  -webkit-text-fill-color: transparent; /* Sembunyikan warna teks */
+}
+
+table {
+  width: 100%; /* Gunakan lebar penuh */
+  border-collapse: collapse; /* Gabungkan border cell */
+  margin-top: 20px; /* Atur margin atas */
+  margin-bottom: 0px; /* Atur margin bawah */
+}
+
+th,
+td {
+  border: 1px solid #000; /* Tentukan border */
+  padding: 8px; /* Atur padding */
+  text-align: left; /* Atur rata teks ke kiri */
+}
+
+th {
+  background-color: #add8e6; /* Tetapkan warna latar belakang */
+  font-weight: bold; /* Atur ketebalan font */
+  padding: 10px; /* Atur padding */
+}
+
+td {
+  background-color: #ffffff; /* Tetapkan warna latar belakang */
+}
+
+.footer {
+  background-color: #f5f5dc; /* Tetapkan warna latar belakang */
+  width: 100%; /* Gunakan lebar penuh */
+  text-align: center; /* Pusatkan teks */
+  color: #000000; /* Atur warna teks */
+  font-weight: bold; /* Atur ketebalan font */
+  margin: 0; /* Hapus margin */
+  padding: 1px 0; /* Atur padding atas dan bawah */
+}
+
+.footer a {
+  color: #000000; /* Atur warna tautan */
+}
+
+.conversion-formula {
+  margin: auto; /* Atur margin secara otomatis di semua sisi */
+  border: 1px solid #000000; /* Tentukan border */
+  border-radius: 5px; /* Tambahkan border-radius */
+  background-color: #f5f5dc; /* Tetapkan warna latar belakang */
+  text-align: center; /* Pusatkan teks */
+}

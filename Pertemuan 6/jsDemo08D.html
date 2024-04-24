@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Inisialisasi array planets dengan satu elemen "earth"
+      var planets = ["earth"];
+      
+      // Menambahkan elemen-elemen ke array planets menggunakan unshift dan push
+      planets.unshift("mercury", "venus");
+      planets.push("mars", "jupiter", "saturn");
+
+      // Menampilkan isi array planets setelah operasi unshift dan push
+      document.writeln("planets @1: " + planets.join(" ") + "<br>");
+
+      // Menghapus elemen terakhir dari array planets menggunakan pop
+      var last = planets.pop();
+
+      // Menampilkan isi array planets setelah operasi pop
+      document.writeln("planets @2: " + planets.join(" ") + "<br>");
+
+      // Menghapus elemen pertama dari array planets menggunakan shift
+      var first = planets.shift();
+
+      // Menampilkan isi array planets setelah operasi shift
+      document.writeln("planets @3: " + planets.join(" ") + "<br>");
+
+      // Menampilkan elemen pertama dan terakhir yang dihapus sebelumnya
+      document.writeln(" @4: " + first + " " + last + "<br>");
+
+      // Menghapus elemen terakhir dari array home
+      var home = ["mercury", "venus", "earth"].pop();
+
+      // Menampilkan elemen terakhir yang dihapus dari array home
+      document.writeln(" @5: " + home + "<br>");
+
+      // Menambahkan elemen "mars" ke array number dan menampilkan panjang array
+      var number = ["earth"].push("mars");
+      document.writeln(" @6: " + number + "<br>");
+
+      // Mengatur panjang array planets menjadi 2
+      planets.length = 2;
+      
+      // Menampilkan isi array planets setelah mengatur panjangnya
+      document.writeln("planets @7: " + planets.join(" ") + "<br>");
+
+      // Membuat salinan dari array planets menggunakan slice
+      var list = planets.slice();
+
+      // Menampilkan isi array list setelah disalin dari array planets
+      document.writeln("list @8: " + list.join(" ") + "<br>");
+
+      // Mengubah elemen kedua dari array planets menjadi "midgard"
+      planets[1] = "midgard";
+
+      // Menampilkan isi array list setelah perubahan pada array planets
+      document.writeln("list @9: " + list.join(" ") + "<br>");
+
+      // Mengganti array planets dengan array baru
+      planets = ["Bellerophon", "Ymir", "Osiris"];
+
+      // Menampilkan isi array list dan array planets setelah penggantian
+      document.writeln("list @10: " + list.join(" ") + "<br>");
+      document.writeln("planets @10: " + planets.join(" ") + "<br>");
+
+     /*
+      Penjelasan untuk pertanyaan 1
+
+      Output dari list @9 adalah venus midgard.
+
+      Hal ini terjadi karena variabel list masih menunjuk pada array yang sama dengan planets.
+      Untuk memisahkan keduanya, digunakan fungsi slice() yang membuat salinan array planets.
+
+      Penjelasan untuk pertanyaan 2
+
+      Output dari list @10 adalah venus midgard,
+      sedangkan output dari planets @10 adalah Bellerophon Ymir Osiris.
+
+      Peristiwa ini terjadi saat sintaks planets = ["Bellerophon", "Ymir", "Osiris"]; dieksekusi.
+      Saat itu, variabel planets menyimpan referensi ke array baru dengan tiga string tersebut,
+      sedangkan variabel list masih mengacu pada array planets sebelumnya.
+      */
+    </script>
+  </body>
+</html>

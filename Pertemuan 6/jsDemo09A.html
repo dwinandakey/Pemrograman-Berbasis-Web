@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript 09A: Inheritance</title>
+    <script id="j1">
+      // Definisi konstruktor untuk Rectangle
+      function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.type = "Rectangle";
+      }
+      // Menambahkan metode area ke prototype Rectangle
+      Rectangle.prototype.area = function () {
+        return this.width * this.height;
+      };
+      // Menambahkan metode toString ke prototype Rectangle
+      Rectangle.prototype.toString = function () {
+        // Jika tipe adalah Square, kembalikan format yang sesuai
+        if (this.type == "Square") return `${this.type} [${this.width}]`;
+        // Jika tidak, kembalikan format lainnya
+        return `${this.type} [${this.width},${this.height}]`;
+      };
+      // Definisi konstruktor untuk Square
+      function Square(length) {
+        this.width = this.height = length;
+        this.type = "Square";
+      }
+      // Mengatur prototype Square ke sebuah instance baru dari Rectangle
+      // Square inherits from Rectangle
+      Square.prototype = new Rectangle();
+
+      // Definisi konstruktor untuk Polygon
+      function Polygon(n, s) {
+        this.n = n;
+        this.s = s;
+        this.type = n + "-Polygon";
+      }
+      // Menambahkan metode area ke prototype Polygon
+      Polygon.prototype.area = function () {
+        return (
+          ((1 / 4) * this.s ** 2 * this.n) /
+          Math.tan(Math.PI / this.n)
+        ).toFixed(2);
+      };
+      // Menambahkan metode toString ke prototype Polygon
+      Polygon.prototype.toString = function () {
+        return `${this.type} [${this.s}]`;
+      };
+    </script>
+  </head>
+  <body>
+    <script id="j2">
+      var rc1 = new Rectangle(2, 3);
+      var sq1 = new Square(5);
+      var plgn = new Polygon(5, 6);
+      // Menampilkan luas rc1
+      document.writeln("The area of rc1 is ", rc1.area(), "<br>");
+      // Menampilkan luas sq1
+      document.writeln("The area of sq1 is ", sq1.area(), "<br>");
+      // Menampilkan luas dan bentuk rc1
+      document.writeln("The area of ", rc1, " is ", rc1.area(), "<br>");
+      // Menampilkan luas dan bentuk sq1
+      document.writeln("The area of ", sq1, " is ", sq1.area(), "<br>");
+      // Menampilkan luas dan bentuk plgn
+      document.writeln("The area of ", plgn, " is ", plgn.area(), "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Random</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #000000;
+        color: #333;
+        font-family: Arial, sans-serif;
+        background: url(jsRandom.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 650px;
+        width: 600px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background-color: #f5f5dc;
+        padding: 20px;
+        flex-grow: 1;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .card h1 {
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .card table {
+        border-collapse: collapse;
+        width: 80%;
+        margin-bottom: 20px;
+        table-layout: fixed;
+      }
+
+      .card table tr th {
+        border: 2px solid #333;
+        font-size: 36px;
+        cursor: pointer;
+        padding: 10px;
+        width: 33%;
+        background-color: #e74c3c; /* Warna latar belakang biru */
+        color: #ffffff; /* Warna teks putih */
+      }
+
+      .card table tr th:hover {
+        background-color: rgba(226, 87, 45, 0.363);
+      }
+
+      .card button {
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: #ff7f50;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .card button:hover {
+        background-color: #e63900;
+      }
+
+      .card h1 {
+        margin-bottom: 25px;
+        color: #333;
+        background: linear-gradient(
+          to right,
+          #ff9966,
+          #ff5e62
+        ); /* Efek gradien */
+        -webkit-background-clip: text; /* Membuat efek gradien hanya berlaku untuk teks */
+        -webkit-text-fill-color: transparent; /* Menyembunyikan warna teks */
+      }
+
+      .description {
+        margin-top: 20px;
+        text-align: center;
+        color: #000000;
+      }
+      .result {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff5733;
+      }
+      .footer {
+        background-color: #f5f5dc;
+        width: 100%;
+        text-align: center;
+        color: #000000;
+        font-weight: bold; /* Menambahkan ketebalan teks */
+        margin: 0; /* Menghapus margin */
+        padding: 1px 0; /* Menambahkan padding atas dan bawah */
+      }
+
+      .footer a {
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>TABEL HITUNG</h1>
+      <div class="description">Batas Maksimum: 1 - 1000</div>
+      <label for="maxLimit">Batas Maksimum: </label>
+      <input type="number" id="maxLimit" value="100" min="1" max="1000" />
+      <table>
+        <tr>
+          <th id="a" onclick="randomize(this)">0</th>
+          <th id="b" onclick="randomize(this)">0</th>
+          <th id="c" onclick="randomize(this)">0</th>
+        </tr>
+        <tr>
+          <th id="d" onclick="randomize(this)">0</th>
+          <th id="e" onclick="randomize(this)">0</th>
+          <th id="f" onclick="randomize(this)">0</th>
+        </tr>
+        <tr>
+          <th id="g" onclick="randomize(this)">0</th>
+          <th id="h" onclick="randomize(this)">0</th>
+          <th id="i" onclick="randomize(this)">0</th>
+        </tr>
+      </table>
+      <div class="buttons">
+        <button onclick="sum()">HITUNG</button>
+        <button onclick="randomizeAll()">RANDOMIZE</button>
+        <button onclick="window.location.reload()">ULANG</button>
+      </div>
+      <div class="description">
+        Klik pada sel untuk mengubah angka atau klik pada tombol randomize untuk
+        mengubah angka pada semua sel, lalu tekan tombol HITUNG untuk melihat
+        hasil perhitungannya.
+      </div>
+      <div class="result" id="total"></div>
+      <div class="result" id="average"></div>
+      <div class="result" id="median"></div>
+    </div>
+
+    <div class="footer">
+      <p>
+        Created by Dwinanda Muhammad Keyzha
+        <a href="mailto:222212576@stis.ac.id">(222212576@stis.ac.id)</a>
+      </p>
+    </div>
+
+    <script>
+      function randomize(number) {
+        var maxLimit = parseInt(document.getElementById("maxLimit").value);
+        var hasil = Math.floor(Math.random() * maxLimit + 1);
+        document.getElementById(number.id).innerHTML = hasil;
+      }
+
+      function sum() {
+        var values = [];
+        var sum = 0;
+
+        for (let i = 0; i < 9; i++) {
+          var cellValue = parseInt(
+            document.getElementById(String.fromCharCode(97 + i)).innerHTML
+          );
+          values.push(cellValue);
+          sum += cellValue;
+        }
+
+        var average = sum / 9;
+        document.getElementById("total").innerText = "Jumlah: " + sum;
+        document.getElementById("average").innerText =
+          "Rata-rata: " + average.toFixed(2);
+
+        var sortedValues = values.slice().sort((a, b) => a - b);
+        var median = sortedValues[4];
+        document.getElementById("median").innerText = "Median: " + median;
+      }
+
+      function randomizeAll() {
+        var maxLimit = parseInt(document.getElementById("maxLimit").value);
+        for (let i = 1; i <= 9; i++) {
+          var hasil = Math.floor(Math.random() * maxLimit + 1);
+          document.getElementById(String.fromCharCode(96 + i)).innerHTML =
+            hasil;
+        }
+      }
+
+      document
+        .getElementById("maxLimit")
+        .addEventListener("input", function () {
+          if (parseInt(this.value) > 1000) {
+            this.value = 1000;
+          }
+        });
+    </script>
+  </body>
+</html>

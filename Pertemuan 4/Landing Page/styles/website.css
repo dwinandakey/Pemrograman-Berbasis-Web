@@ -1,0 +1,539 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+input {
+  border: none;
+}
+body {
+  width: 144rem;
+}
+.website-YVT {
+  width: 100%;
+  height: 102.4rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+}
+.website-YVT .auto-group-gbcr-7ws {
+  width: 144rem;
+  height: 60rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.website-YVT .auto-group-gbcr-7ws .component-1-ych {
+  opacity: 0.5;
+  box-sizing: border-box;
+  padding-left: 170.6rem;
+  width: 144rem;
+  height: 60rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../assets/bg2-bg.png");
+}
+.website-YVT .auto-group-gbcr-7ws .component-1-ych .bg1-48M {
+  width: 144rem;
+  height: 60rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.website-YVT .auto-group-gbcr-7ws .menu-K4H {
+  width: 144rem;
+  height: 8rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.website-YVT .auto-group-gbcr-7ws .naturegear-QbX {
+  width: 12.3rem;
+  height: 3rem;
+  position: absolute;
+  left: 14rem;
+  top: 3rem;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #4caf50;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+}
+.website-YVT .auto-group-gbcr-7ws .naturegear-QbX .naturegear-QbX-sub-0 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.5;
+  color: #4caf50;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT .auto-group-gbcr-7ws .naturegear-QbX .naturegear-QbX-sub-1 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.5;
+  color: #795548;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3 {
+  width: 96.7rem;
+  height: 3rem;
+  position: absolute;
+  left: 14rem;
+  top: 55rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3-sub-0 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  font-style: italic;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3-sub-1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  font-style: italic;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3-sub-2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  font-style: italic;
+  color: #4caf50;
+  font-family: Poppins, "Source Sans Pro";
+  margin-left: 0.3em;
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3
+  .embrace-the-unknown-explore-the-extraordinary-and-embark-on-the-dream-with-naturegear-Am3-sub-3 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  font-style: italic;
+  color: #795548;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT .auto-group-gbcr-7ws .home-Mpq {
+  width: 4.3rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 75rem;
+  top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+}
+.website-YVT .auto-group-gbcr-7ws .rent-FfK {
+  width: 3.3rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 85.5rem;
+  top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+}
+.website-YVT .auto-group-gbcr-7ws .shop-AnH {
+  width: 3.7rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 94.6rem;
+  top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+}
+.website-YVT .auto-group-gbcr-7ws .about-us-gkd {
+  width: 6.5rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 103.4rem;
+  top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+}
+.website-YVT .auto-group-gbcr-7ws .contact-oKT {
+  width: 5.9rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 114.9rem;
+  top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .mengubah-mimpi-petualangan-menjadi-kenyataan-ge9 {
+  width: 65.5rem;
+  height: 28.8rem;
+  position: absolute;
+  left: 14rem;
+  top: 10rem;
+  font-size: 6.4rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  padding-top: 0;
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .mengubah-mimpi-petualangan-menjadi-kenyataan-ge9
+  .mengubah-mimpi-petualangan-menjadi-kenyataan-ge9-sub-0 {
+  font-size: 6.4rem;
+  font-weight: 900;
+  line-height: 1.5;
+  font-style: italic;
+  color: #8bc34a;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT
+  .auto-group-gbcr-7ws
+  .mengubah-mimpi-petualangan-menjadi-kenyataan-ge9
+  .mengubah-mimpi-petualangan-menjadi-kenyataan-ge9-sub-1 {
+  font-size: 6.4rem;
+  font-weight: 900;
+  line-height: 1.5;
+  font-style: italic;
+  color: #ffd700;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT .auto-group-gbcr-7ws .cart-outline-Sv9 {
+  width: 2.25rem;
+  height: 2.25rem;
+  position: absolute;
+  left: 130.375rem;
+  top: 2.875rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.website-YVT .auto-group-gbcr-7ws .union-JxM {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 140rem;
+  top: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.website-YVT .auto-group-gbcr-7ws .logo-pA1 {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  left: 9rem;
+  top: 2rem;
+  background-size: 100% 100%;
+  background-image: url("../assets/logo.png");
+}
+.website-YVT .auto-group-rokr-sPB {
+  box-sizing: border-box;
+  padding: 2rem 50.1rem 2rem 45.8rem;
+  width: 144rem;
+  height: 13.1rem;
+  position: absolute;
+  left: 0;
+  top: 91rem;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+.website-YVT .auto-group-rokr-sPB .home-fpq {
+  margin: 2.6rem 0.8rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .item--Y7w {
+  margin: 2.6rem 0.5rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .gear-d9P {
+  margin: 2.6rem 0.5rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .item--v8V {
+  margin: 2.6rem 0.5rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .auto-group-dghj-Crh {
+  margin: 0rem 0.4rem 2.2rem 0rem;
+  width: 23.7rem;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .auto-group-dghj-Crh .auto-group-7bpb-HdF {
+  margin: 0rem 2rem 1.8rem 0rem;
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.website-YVT
+  .auto-group-rokr-sPB
+  .auto-group-dghj-Crh
+  .auto-group-7bpb-HdF
+  .facebookperspectivemattes-1-Neh {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.website-YVT
+  .auto-group-rokr-sPB
+  .auto-group-dghj-Crh
+  .auto-group-7bpb-HdF
+  .twitterperspectivemattes-1-Gzy {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.website-YVT
+  .auto-group-rokr-sPB
+  .auto-group-dghj-Crh
+  .auto-group-7bpb-HdF
+  .instagramperspectivemattes-1-akm {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .auto-group-dghj-Crh .auto-group-yeny-U5T {
+  width: 100%;
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.website-YVT
+  .auto-group-rokr-sPB
+  .auto-group-dghj-Crh
+  .auto-group-yeny-U5T
+  .privacy-policy-zJh {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT
+  .auto-group-rokr-sPB
+  .auto-group-dghj-Crh
+  .auto-group-yeny-U5T
+  .item--uRf {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT
+  .auto-group-rokr-sPB
+  .auto-group-dghj-Crh
+  .auto-group-yeny-U5T
+  .rental-agreement-QtD {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .item--jvV {
+  margin: 2.6rem 0.5rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .tips-faq-sG1 {
+  margin: 2.6rem 0.5rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .item--bSu {
+  margin: 2.6rem 0.5rem 0rem 0rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-rokr-sPB .blog-8Bw {
+  margin-top: 2.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.website-YVT
+  .dapatkan-peralatan-outdoor-berkualitas-tinggi-mulai-petualangan-anda-sekarang-3Zo {
+  width: 39.1rem;
+  height: 4.8rem;
+  position: absolute;
+  left: 14rem;
+  top: 62.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  font-style: italic;
+  color: #ffffff;
+  font-family: Poppins, "Source Sans Pro";
+}
+.website-YVT .auto-group-uwso-JEq {
+  width: 46rem;
+  height: 5rem;
+  position: absolute;
+  left: 14rem;
+  top: 70rem;
+  display: flex;
+  align-items: center;
+}
+.website-YVT .auto-group-uwso-JEq .auto-group-5om7-Pn5 {
+  margin-right: 6rem;
+  width: 20rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-style: italic;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../assets/box-daftar.png");
+  flex-shrink: 0;
+}
+.website-YVT .auto-group-uwso-JEq .auto-group-dl69-4dK {
+  width: 20rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-style: italic;
+  color: #000000;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../assets/box-login-.png");
+  flex-shrink: 0;
+}
+.website-YVT .user-circle-ZKB {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 135rem;
+  top: 2.5rem;
+  object-fit: contain;
+  vertical-align: top;
+}
